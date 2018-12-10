@@ -1,0 +1,92 @@
+https://www.youtube.com/watch?v=Z5vNK6U2HKA
+
+AWS Storage Options
+-> Object Storage
+-> Archieve Storage
+-> Block Storage
+-> Gateway Solution
+
+Object Storage
+Simple Storage Service (S3)
+-> Highly Scalable, Fully Manageable Object Storage
+-> Virtually Unlimited Storage Capacity (You do not need to tell how much storage you need)
+-> 99.9999999% durability
+-> Millions of transactions per second
+
+s3 Buckets and Objects
+-> Fully Managed
+-> Objects are stored in Buckets
+-> Versioning (Store Different versions of the file)
+-> Control access to different objects in buckets (by using bucket policies)
+-> You can enable AES-256 bit encryption with a click of a button
+-> Any object you put is private by default. You can make it public
+-> This is ideal for images, videos, application data, backups and more
+
+S3 - Static Content Website
+-> S3 becomes you webserver
+-> Offload static content to S3 and run dynamic content on EC2
+
+S3 - When to use?
+Use Amazon S3 when you need
+-> Web-scale storage capacity and performance for the web applications
+-> High data durability
+-> Storage for log file
+-> Storage for backup and active archieves
+-> Single origin store with delivery through Content Delivery Networks such as Amazon CloudFront
+-> Ingestion point for Big Data Specialization
+
+Amazon Glacier
+-> Very effective service if you want to archieve data at a very low cost for longer term period of time
+-> Its great if you have infrequently accessed data. For example log files that you need to keep for longer period of time
+-> Higher retrieval time than S3. Retrieval time 
+
+Amazon S3 Lifecycle Policies
+-> S3 Lifecycle policies allow to delete or move objects based on age
+-> Set rules per S3 bucket. This allows you to move objects based on the objects age automatically based on the archieval service. It also allows you to delete after a period of time
+For example, you can set rules as (i) Move the object from S3 to Glacier in 30 days (ii) Delete objects after 365 days
+
+UseCase: SoundCloud
+-> They use Amazon Glacier to put all raw uploaded audio files.
+-> They transcode audio files to formats better suited for online delivery
+-> Those transcoded files are in S3. Since S3 allows the object to be public, it can directly serve the transcoded files, removing the need for running an actual web-server
+
+EC2 Instance Storage (Elastic Compute Cloud)
+-> Run your own OS and run webservers
+-> Most EC2 instances come with so called instance storage. This is a local directly attached storage service that you get with the server. The size of the instance storage depends on the instance type you choose. Some are optimized to compute, others for memory, others for storage. 
+-> Allows storage optimized upto  365K reads per second and 315K writes per second
+-> EC2 instance is volatle - (i) Data will not persist when you stop your virtual server
+
+Elastic Block Store (EBS)
+-> This is useful when we want to persist the data
+-> High-performance block storage
+-> These volumes can be created for different sizes (1 GB to 1TB)
+-> You have choice between SSD vs Magnetic volumnes
+-> Throughput can be burstable or provisional
+-> You can create multiple volumes
+-> You can take a snapshot of your EBS volume into S3. Create new EBS volumes from snapshots
+
+Performance
+-> EBS Magnetic: 40-200 Input/Output Operations per seconds (IOPS)
+-> EBS General Purpose: (i) SSD backed (ii) 3 IOPS / GB (iii) Burstable to 3000 IOPS
+-> EBS Provisioned IOPS: (i) Allows you to have consistency around throughput and performance per individual volume. (ii) SSD backed (iii) Upto 4000 IOPS
+
+AWS Storage Gateway
+-> Connect an on-premise software appliance and provide integration back to storage service
+-> Provides virtual image that you run on-premise. It exposes certain volumes. The data is automatically replicated to S3
+-> Supports 3 different configurations (i) Gateway-Cached Volumes (ii) Gateway Stored Volumes (iii) Gateway-Virtual Tape Library (VTL)
+-> AWS Storage Gateway gives you a certain virtual machine which you can run on premise
+Cached: Data is stored in Amazon S3 with frequently accessed files kept locally.
+Stored: Asynchronous point-in-time backup snapshots to Amazon S3
+VTL: Exposes an industry standard virtual tape library. (i) You can write through tape, the data willl land on S3 (ii) You can put in shelf (Glacier)
+
+How do we get data into AWS
+Internet: Transfer data through secure encrypted tunnel over the public internet
+AWS Direct Connect: Dedicted bandwidth between site and AWS (Useful for larger files. Internet connectivity might not be fast enough)
+AWS Import/Export: Physical transfer of media into and out of AWS
+
+Why AWS for storage?
+-> Reduce Costs: (i) Reduce CAPEX while dramatically increasing stability (ii) Eliminate the need for secondary sites
+-> Reduce on-premise: (i) Eliminate on premise equipment to manage archieves (ii) Consolidating on-premise and augment with cloud
+-> Change processes: (i) Eliminate capacity planning (ii) Eliminate provisioning for peak demand
+-> Remove aging technologies: (i) Remove tape archieves (ii) Cycle out aging disk arrays
+
