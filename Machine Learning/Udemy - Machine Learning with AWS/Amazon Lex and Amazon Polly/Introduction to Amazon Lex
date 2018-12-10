@@ -1,0 +1,18 @@
+-> To build conversational interfaces using voice and text
+-> Deep Learning Functionalities for ASR (Automatic Speech Recognition)
+
+Able to recognize intent of the text
+
+Benefits
+-> Easy to use
+-> Seamlessly deploy and scale
+-> Cost Effective
+
+Ho
+Define actions that are supposed to be performed by the bot
+These actions are intents that need to be fulfilled by the bot
+For each intent, you newed to add utterance and slot
+
+In botsIn bots you have to add intent 
+
+Intent - Set of Actions

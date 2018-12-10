@@ -1,0 +1,37 @@
+Will go through 
+-> Amazon Sagemaker
+Used for building, training and deploying ML models at scale
+
+-> Amazon Comprehend
+Discovering insights and relationships from text
+Uses NLP service to extract useful information
+
+-> AWS DeepLens
+First Deep learning enabled video camera
+
+-> Amazon Lex
+Making conversational bots
+
+-> Machine Learning
+Generating predictions (batch as well as real time)
+
+-> Amazon Polly
+Text to Speech Conversion Service
+
+-> Rekognition
+Lot of things
+Object and Scence Detection
+Unsafe Content Detection
+Facial Analysis
+Facial Recognition
+Celebrity Recognition
+Text in Image (OCR)
+Video Analytics
+
+-> Amazon Transcribe
+Translate Language Text
+
+-> Amazon Translate
+Convert Source Language to Target Language
+
+
