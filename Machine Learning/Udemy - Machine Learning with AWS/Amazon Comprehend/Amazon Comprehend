@@ -1,0 +1,30 @@
+Natural Language Processing
+-> Way to derive information from text
+
+Applications
+-> Voice of Customer Analysis
+Support Communications chats etc.
+Stores in S3
+Amazon Comprehend analyzes the data
+Stored in redshift
+
+-> Intelligent Document Search
+Reviews stored in S3
+Create a batch job using AWS Lambda
+Amazon Comprehend will add semantic rich keyword list to ElasticSearch and index the reviews using the list
+ 
+
+-> Content Personalization for web applications
+-> Get better answers from your text
+-> Identify topics in a collection of text
+-> Continually learning, always improving
+-> Integrated with Amazon S3 and AWS Glue
+
+
+
+
+
+
+
+
+
