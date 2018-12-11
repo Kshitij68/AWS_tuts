@@ -1,0 +1,15 @@
+Data center <=> Availability Zones
+Has multiple availability zones in each region (to have a back-up)
+
+Edge Locations: Customer requirement is routed to nearby edge location. If the content is available, it is served right away. If not edge location will contact the central server to download and cache
+
+Availability Zones
+-> Located in lower risk flood plains
+-> UPS and backup generators onsite
+-> Fed via different electric grids from independent utilities
+-> Multiple redundant tier-1 transit providers
+
+Region - Exceptions
+-> AWS GovCloud - Restricted to US Government agencies and organizations in government regulated industries
+-> AWS Chine - Limited to China Based and Multinational companies with customers in China
+-> Requires separate account and process

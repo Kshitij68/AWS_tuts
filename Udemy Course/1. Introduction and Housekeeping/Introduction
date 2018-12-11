@@ -1,0 +1,34 @@
+Why this course?
+
+-> Cloud Based - Focus on Current Best Practices
+-> Learn Most Useful Algorithms
+-> Easy to Integrate
+-> Elastic Cloud Handles Data of Any Size
+-> No upfront cost or commitment - Pay as you go
+
+AWS Machine Learning Services
+-> AWS Machine Learning
+    (i) Easy to use Cloud Based ML service
+    (ii) Perfect for Beginners
+    (iii) Linear Model - Regression, Binary Classification, Multinomial Classification
+-> AWS SageMaker:
+    (i) Managed Jupyter Notebook Environment
+    (ii) Distributed Training
+    (iii) Scalable Real Time Prediction
+    (iv) Wide choice of ML Algorithms or bring your own
+-> Application Services
+    (i) Pre-trained Services
+    (ii) Vision, Conversational Chatbots, Language Services
+
+Signing up ends up you having a root account
+
+You can give access to IAM users for billing also.
+
+Set up Billing Alerts can also be done by using the service CloudWatch
+
+How to set up AWS Command Line
+Troubleshooting possible links: https://github.com/aws/aws-cli/issues/1778
+
+Once done, on the command line run: aws configure --profile <user_name>
+
+aws s3 ls --profile ml_user_predict
