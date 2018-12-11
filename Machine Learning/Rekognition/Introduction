@@ -1,0 +1,28 @@
+Multiple types of things can be achieved using Amazon Rekognition
+-> Object and Scene Detection
+Automatically Labels Objects, Concepts and Scences in your images (with confidence score)
+
+-> Image Moderation
+Detects explicit or suggestive adult content in your images (with confidence score)
+
+-> Facial Analysis
+Get complete analysis of facial attributes (with confidence scores)
+
+-> Celebrity Recognition
+Automatically recognizes celebrities in images (with confidence scores)
+
+-> Face Comparision
+Compare faces to see how closely they match based on similarity percentage
+
+-> Text in Image
+Detects and extracts text in your image
+
+-> Video Analysis
+Service analyzes video and detects objects, activities, people, celebrities, and more in video and live streams
+
+Properties
+Can Integrate into Powerful Visual Analysis
+Continuously Learning
+Integrated with AWS Services
+
+
