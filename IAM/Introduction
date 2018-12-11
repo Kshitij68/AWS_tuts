@@ -1,0 +1,24 @@
+https://www.youtube.com/watch?v=UqKWHZ36yEM
+
+Why do we need Access Management?
+Say you have a company which has a server. This server has all the modules, which gives different users permission.
+You need to have an administrator who has all the permissions
+When a UI developer comes in the company, he should only have access to the graphical tools.
+If a business analyst comes in, only the analytics modules should be accessible in the server.
+Therefore, each role should have only certain set of rights that they deserve.
+
+What is IAM?
+IAM is a service from AWS using which you can give permissions to different users who are using the same AWS account that you have created
+You can have one AWS account who can work on different things.
+You can assign policies to limit access the AWS services
+
+Components of IAM
+Users: You can create and manage AWS users. When AWS account is created, it is a root account. Any person who wants to use AWS account has to be added as a user.
+Groups: All users need to be given identical access
+Roles: Similar to users. But they are assigned to applications. Say, you are creating EC2 instance and inside EC2 instance you are hosting a web application. Now that has been designed in such a way, that interacts with S3 service. For application to interact with S3 service I have to give it permissions.
+Policies: To create permissions to user, group, role or resource, you create a policy, which is a document explicitly listing the permissions
+
+Multi-Factor Authentication
+You can configure your AWS account. When you enter username and password, it will ask for a code.
+Google Authenticator can be used for Multi-Factor Authenticator
+HandsOn
