@@ -1,0 +1,6 @@
+Amazon Sagemaker is an end-to-end machine learning pipeline
+
+Notebook Instance:- You can play with data just like any other Jupyter Notebook
+Jobs:- Ask to train across N number of instances
+Models:- Create models for hosting from job outputs
+Endpoint:- Deploy endpoints for developers to use in production.
