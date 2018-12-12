@@ -1,0 +1,37 @@
+https://www.youtube.com/watch?v=J7MWpyFA4Fo
+
+Machine Learning applications core part is to build something to do predictions
+
+As part of model you take input as labelled dataset
+The need for quality training data is quite important for high quality results
+
+Data labeling is hard
+-> Need to label large datasets
+-> Requires human to perform labeling
+-> Becomes time consuming and costly
+-> Difficult to achieve high-accuracy for labels
+
+Amazon Sagemaker: Build, train and deploy ML
+-> Pre-built notebooks for common problems: Collect and prepare training data
+-> Built in high performance algorithms: Choose and optimize your ML algorithm
+-> One-click training: Set up and manage environments for training
+-> Optimization: Train and tune model (trial and error)
+-> One-Click Deployment: Deploy model in production
+-> Fully managed with auto-scaling: Scale and manage the production environment
+
+Amazon Sagemaker: Ground Truth
+-> Adds data preparation and labelling also
+-> Makes data labelling easy and cheap
+-> Supports built in workflows or labelling tasks inlcuding:-
+    Bounding Boxes
+    Image Classification
+    Semantic Segmentation
+    Text Classification
+    Custom Tasks
+-> Ground truth uses active learning and auto-labeling
+    It starts with input data you provide. Active learning takes some input set and allows the users to label them. These are used by ground truth to train a machine learning model
+
+Human Workforce Options
+-> Public: Through Amazon Mechanical Turk
+-> Private: Team of workers you have sourced yourself
+-> Vendor: Curated set of workforce that specialize in providing labeling services
