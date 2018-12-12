@@ -1,0 +1,74 @@
+https://www.youtube.com/watch?v=4pbXdsjZx_k
+
+Why did we build AWS SageMaker?
+Their is a trend that developers are involved in many applications.
+Data and Analytics have become a very important part of developers toolkit
+Developers work together with Data Science and Data Engineering teams to drive personalized applications
+
+AWS has thought of this as three different types of data driven development:
+-> Retrospective: Analysis and Reporting
+   AWS Redshift, RDS, S3, EC2, EMR
+-> Here-and-now: Real Time Processing and Dashboards
+    AWS Kinesis, EC2, Lambda
+-> Inferences: To enable smart applications
+    AWS DeepLearning AMI, Machine Learning
+
+Data Wrangling
+-> Machine Learning process is quite hard.
+-> Data is often not clean, not formatted
+-> Getting all the data in one place in particularly difficult
+-> Setting up the infrastructure is also a challenge
+
+Experimentation
+-> Set up and manage clusters
+-> Scale / Distribute ML algorithms
+
+Deployment
+-> Set up and manage inference clusters
+-> Manage and auto scale inference APIs
+-> Testing, versioning, and monitoring
+
+Amazon Sagemaker is quickest and easiest way for your data scientists and developers to get ML models from idea to production
+
+Introduction to Amazon Sagemaker
+-> End-to-End Machine Learning plateform
+-> Zero setup
+-> Flexible Model Training
+-> Pay by the second\
+
+Distributed training that works with you
+-> Amazon optimized algorithms using AWS SDK
+-> Apache Spark SageMaker Estimators
+-> Bring your own Deep Learning Scripts
+-> Custom Algorithm Docker Image
+
+Algorithms designed for huge datasets
+-> Streaming datasets, for cheaper training
+-> Train faster, in a single pass
+-> Greater reliability on extremely large datasets
+-> Choice of several ML algorithms
+
+More than just general purpose algorithms
+-> XGBoost, Factorization Machines, Linear Regression for Classification and Regression
+-> KMeans and PCA for clustering and dimensionality reduction
+-> Image classification with convolutional neural networks
+-> LDA and NTM for topic modeling, seq2seq for translation
+
+Quick Deploy in Production
+-> One Step Deployment
+-> Low Latency, High Throughput, and high reliability
+-> A/B Testing
+-> Use your model
+
+Zero setup for data exploration
+-> Resizable (to different instance types) as you need
+-> Common tools pre-installed
+-> Easy access to your data sources
+-> No servers to manage
+
+Pay as you go and inexpensive
+-> ML compute by the second starting at $0.04/hr
+-> ML storage by the second at $0.14 per GB-month
+-> Data processed in notebooks and hosting at $0.016 per GB
+-> Free trial to get started quickly
+
