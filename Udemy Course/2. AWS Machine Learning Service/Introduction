@@ -1,0 +1,40 @@
+Bucket name is unique across all the users
+
+We need to grant machine learning service access to these buckets
+
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AmazonML_s3:ListBucket",
+			"Effect": "Allow",
+			"Principal": {
+				"Service": "machinelearning.amazonaws.com"
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::BUCKET_NAME"
+		},
+		{
+			"Sid": "AmazonML_s3:GetObject",
+			"Effect": "Allow",
+			"Principal": {
+				"Service": "machinelearning.amazonaws.com"
+			},
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::BUCKET_NAME/*"
+		},
+		{
+			"Sid": "AmazonML_s3:PutObject",
+			"Effect": "Allow",
+			"Principal": {
+				"Service": "machinelearning.amazonaws.com"
+			},
+			"Action": "s3:PutObject",
+			"Resource": "arn:aws:s3:::BUCKET_NAME/*"
+		}
+	]
+}
+
+Replace BUCKET_NAME with the actual buckets name
+Principal: Refers to who has the access
+Action: What action it can perform
