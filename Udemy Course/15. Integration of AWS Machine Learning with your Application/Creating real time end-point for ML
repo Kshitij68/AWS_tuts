@@ -1,0 +1,11 @@
+To enable real time end point:
+    Go to services
+    Pick Machine Learning
+    Select the ML model (should be trained)
+    In the summary page, their is a button to enable real-time predictions
+    Click on Real Time Endpoint
+    By Default the application can take 200 requests per second. You can contact customer support to increase the limit
+
+Create new users who have only prediction services
+Add a policy:- Amazon_MachineLearning_Real_Time_Prediction_Only_Access
+
