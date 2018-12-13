@@ -1,0 +1,51 @@
+Using ML libraries, building proof of concept is one thing. You can relatively quickly build a proof of concept.
+
+However, converting the model you built into a scalable and secure solution for using your application is a completely different task requiring substantial amount of work
+
+AWS is highly scalable, secure service with redundance built-in
+-> Scale automatically to train model with very large datasets
+-> Scale automatically to support high volume prediction needs
+-> Real time prediction with capacity reservation
+-> Secure - Limit access to Authenticated and Authorized services and users
+-> Serverless
+
+Software Integration
+-> AWS Machine Learning - Complete functionality is accessible through SDK and Command Line Interfaces
+-> Model building and prediction can be fully automated using SDK
+-> AWS SDKs in multiple languages - Python, Java, .NET, Javascript, Ruby, C++
+
+Connectivity and Security Options
+-> You Data Center -> AWS ML Cloud Service
+    Security: Key Based Authentication + IAM Policy + SSL
+-> AWS Hosted Application -> AWS ML Cloud Service
+    Security: IAM Role + SSL
+-> Browser, Apps on Phone -> AWS ML Cloud Service
+    Option I: AWS Cognito Based Authentication + IAM Role + SSL
+    Choice of authentication providersL Cognito, Google, Amazon, Facebook, Twitter, OpenID, Custom
+    Option II: Key Based Authentication + IAM Policy + SSL
+
+Security using IAM
+Policy {
+    Group {
+        User1,
+        User2
+        },
+    Role {
+        Service,
+        EC2
+        },
+    User3}
+
+Hands on Demo - ML Cloud Service
+-> Setup security policies
+    Identity and Access Management (IAM)
+    Cognito
+-> Demo: Prediction from Command Line
+-> Python Client
+    Demo 1: Prediction from Python Client
+    Demo 2: Create Datasource, Train and Evaulate Model from a Python Client
+-> Angular JS Client
+    Demo 1: Prediction from browser client using key based authentication
+    Demo 2: New user registration with Cognito Federated Security
+    Demo 3: Prediction after sign-in with new user account
+-> Demo: Prediction from EC2 Compute Instance
