@@ -1,0 +1,10 @@
+Download and install AWS Command Line tool (AWS CLI, pip install awscli)
+
+Command Line:
+aws configure --profile <user-name>
+
+aws machinelearning predict --profile <user-name> describe-ml-models
+-> Gives list of machinelearning models
+
+aws machinelearning predict --profile ml_user_predict --ml-model-id ml-E5Me5YzfZSp --record {\"Row\":\"1\",\"sepal_length\":\"6.0\",\"sepal_width\":\"2.7\",\"petal_length\":\"5.1\",\"petal_width\":\"1.6\"} --predict-endpoint  https://realtime.machinelearning.us-east-1.amazonaws.com
+
