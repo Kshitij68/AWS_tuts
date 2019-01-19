@@ -1,0 +1,50 @@
+# Course Introduction
+-> Those who see overall understanding of AWS Cloud
+-> Detailed overview fo core concepts
+
+Course Objectives
+-> Define what AWS Cloud is and the basic global infrastructure
+-> Describe the key services on the AWS platform and their common use cases
+-> Describe AWS Cloud architectural principles
+-> Describe basic security and compliance aspects of the AWS platform and the shared security model
+-> Define the billing, account management and pricing models
+-> Identify sources of documentation or technical assistance
+-> Describe the AWS Cloud value proposition
+-> Describe basic/core characteristics of deploying and operating in the AWS Cloud
+
+Entry level course that assumes
+-> General IT technical knowledge
+-> General IT business knowledge
+
+Section 1: AWS Cloud Concepts
+-> Introduction to Cloud
+-> Introduction to AWS Cloud
+
+Section 2: AWS Core Services
+-> Overview of Services and Categories
+-> Introduction to AWS Global Infrastructure
+-> Introduction to Amazon VPC
+-> Introduction to Security Groups
+-> Introduction to Amazon EC2
+-> Introduction to Amazon Elastic Block Store
+-> Introduction to Amazon S3
+-> Introduction to AWS Database Solutions
+
+Section 3: AWS Security
+-> Introduction to AWS Security
+-> The AWS Shared Responsibility Model
+-> AWS Access Control and Management
+-> AWS Security Compliance Programs
+
+Section 4: AWS Architect-ing
+-> Introduction to well-architect-ed framework
+-> Reference tolerance: Fault tolerance and high availability
+
+Section 5: AWS Pricing and Support
+-> Fundamentals of pricing
+-> Pricing details for
+    EC2
+    S3
+    EBS
+    RDS
+    CloudFront

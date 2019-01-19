@@ -1,0 +1,341 @@
+AWS Global Infrastructure
+    - Regions
+        Geographic locations across the world
+        Makes sense to deploy in the largest regions
+    - Availability Zones
+        Collection of data-centers within a certain region
+        Isolated yet connected to ensure common points of failure do not occur
+        Each availability zone is physically different (with own backup generators, cooling equipment, network connectivity)
+        AWS provisions at multiple availability zones
+    - Edge Locations
+        Host Content Delivery Network (CDN) using Amazon CloudFront
+        Delivers content to customers super fast
+        Edge Locations are located in highly populated areas
+
+Amazon Virtual Private Cloud
+    - Introduction
+        Allows you to create a private network within the AWS cloud (same as on-premise networking)
+        Allows complete control over network configuration (almost all complexity is abstracted)
+        Offers several layers of security controls
+        Other AWS services deploy into VPC (EC2, EMR, RDS, WorkSpaces, Load Balancing etc.)
+    - Features
+        Builds upon Regions and Availability Zones
+        Create subnets (public vs private) to multiple zones
+        Control traffic going to subnets using route tables
+        Internet Gateway - Allows access to internet from Amazon VPC
+        NAT Gateway - Allows private subnet resources to access Internet
+    - Example Configuration
+    - Summary
+
+Security Groups
+    - Act like built-in firewalls
+    - Provides you control on which traffic you want to allow or deny
+        - Web Tier
+        - App Tier
+        - Database Tier
+
+Amazon Elastic Compute Cloud (EC2)
+    - Compute refers to servers that are being presented. Things you can do with servers:-
+        Application server
+        Web server
+        Database server
+        Game server
+        Mail server
+        Media server
+        Catalog server
+        File server
+        Computing server
+        Proxy server
+    - Increase and decrease number of servers (aka EC2 instances) to lower costs
+
+AWS Lambda
+    - Overview
+        Without provisioning or managing servers
+        Key Benefits
+            - No servers to manage
+            - Continuous Scaling
+            - Subsecond Metering
+            - Supports NodeJS, Java, C++, Python
+    - Demonstration
+        Use Cases
+            - Real Time Image Processing (from S3)
+            - Real Time Streaming Processing (Kinesis to Lambda to DynamoDB)
+            - Build ETL pipelines
+            - IOT Backends
+            - Mobile Backends
+            - Web Backends
+    - Use Cases
+
+AWS Elastic Beakstalk
+    Introduction to Service
+        Way to quickly get application to cloud
+        What is Elastic Beakstalk?
+            Its a platform as a service
+            Allows a quick deployment of your applications
+            Reduces management complexity
+            Keeps control in your hands
+                Choose your instance types
+                Choose your databases
+                Set and adjust auto-scaling
+                Update your application
+                Access server log files
+                Enable HTTPS on load balancer
+                Supports a large range of platforms
+                    Packer Builder
+                    Single Container, Multi-Container or Preconfigured Docker
+                    Go
+                    Java SE
+                    Java with Tomcat
+                    .NET on Windows Server with IIS
+                    Node.js
+                    PHP
+                    Python
+                    Ruby
+    Components
+    Elastic Beakstalk provides
+        Your code
+        Application service
+        HTTPS service
+        Operating System
+        Language Interpreter
+        Host
+    Demonstration
+
+Application Load Balancer
+    Service Introduction, Overview and Demonstration
+        Second type of load balancer (as part of load balancer feature)
+        Enhanced Featueres:
+            -> Supported Protocols: HTTP, HTTPS, HTTP/2, and WebSockets
+            -> CloudWatch Logs: Additional load balance metrics and target group metric dimension
+            -> Access Logs: Ability to see connection details for websocket connections
+            -> Health Checks: Insight to target and application health at more granular level
+        Additional Features
+            -> Path and Host based Routing:
+               (i) Path-based provides rules that forward requests to different target groups
+               (ii) Host based can be used to define rules that forward requests to different target groups based on host name
+            -> Native IPv6 Support
+            -> AWS WAF
+            -> Dynamic Ports: Amazon ECS integrates with Application Load Balancer to expose Dynamic Ports utilized by scheduled containers
+            -> Deletion, Protection & Request Tracing: Request tracing can be used to track HTTP requests from clients to target
+        Key Terms
+            -> Listeners: Process that checks for connection requests, using the protocol and port that you configure.
+               The rules that you define for a listener determine how the load balancer routes requests to the targets in on or more target groups
+            -> Target: A target is destination for traffic based on the estabilished listener rules
+            -> Target Group: Each target group routes requests to one or more registered targets using the protocol and port number specified.
+               A target can be registered with multiple target groups. Health checks can be configured on a per target group basis
+    Demonstration
+
+Elastic Load Balancer (classic)
+    Multiple Availability Zones
+    Sticky Sessions
+    Cross Zone Balancing
+    Health Checks
+    Use Cases
+        Access through single point to provide access to backend servers
+        Decouple application environment
+        Provide high availability and fault tolerance
+        Increase elasticity and scalability
+    Traffic distribution depends on what type of request you are distributing
+        HTTP/HTTPS: Uses Least Outstanding requests
+        TCP: Uses Round Robin for these requests
+    Monitoring
+        View HTTP responses
+        See number of healthy and unhealthy hosts
+        Filter metrics based on availability zones or load balancer
+    Scalability
+        Will scale based on traffic patterns it sees
+    Internal Load Balancers
+        Has DNS names only to private nodes
+
+Auto Scaling
+    Service Introduction
+        Ensure that you have correct number of EC2 instances are available during deployment
+        Gets rid of guesswork associated with number of EC2 instances
+        It is critical to monitor the usage of resources using CloudWatch
+        Auto-Scaling allows you to add or remove instances based on conditions you provide
+        Answers two important questions:
+            (i) How can I ensure that my workload has enough EC2 resources to meet fluctuating performance requirements ? => Scalability
+            (ii) How can I automate EC2 resource provisioning to occur on-demand ? => Automation
+        Auto-Scaling Components
+            -> Create a Launch Configuration
+            -> Create an Auto Scaling group
+            -> Create an Auto Scaling Policy
+            -> Trigger Auto Scaling
+    Overview
+    Demonstration
+
+Elastic Block Storage (EBS)
+    Service Introduction
+        Choose between HDD and SSD types
+        Persistent and customizable block storage for EC2 instances
+        Replicated in the same Availability Zone
+        Backup using Snapshots
+        Easy and transparent Encryption
+        Elastic Volumes
+    Introduction
+        Availability and Durable: Data in volume is automatically distributed between multiple servers in the availability zone
+        Drive Types: Magnetic and SSD based on price and performance
+        Snapshots: To recrete a new volume from a snapshot (for disaster recovery protection)
+        Encryption: The data will be encrypted during transit
+
+Simple Storage Service (S3)
+    Introduction
+        What is Amazon S3?
+            Fully Managed storage service
+            Store virtually unlimited number of objects
+            Access at any time, from anywhere
+            Rich security controls
+        Designed for Seamless Scaling
+        Access the data anywhere: (i) AWS Management Console (ii) AWS CLI (iii) AWS SDKs
+    Common Use Cases
+        Storing Application Assets
+        Static Web Hosting
+        Backup & Disaster Recovery
+        Staging area for Big Data
+
+Glacier
+    Service Introduction
+        Data Archiving Solution
+        Desired for long term solution at low cost
+        Data that is accessed infrequently
+        99.99999%+ durability
+        Access limited by vault policies
+        Three key terms:
+            Archieve: File/Document that you store in glacier. Each archieve has its own unique ID and can have description if you choose
+            Vault: Container for storing archives
+            Access Policy: What users can and cannot do with the data
+        Lifecycle Policy Example
+            Have policy that the files are transferred from Amazon S3 (Standard) to Amazon S3 (Infrequent Access) in 30 days
+            After 30 more days the files are transferred to Amazon Glacier
+            After a year of age they are deleted
+        Retrieving data in Glacier (three options with varying costs depending on time and size)
+            Bulk: 5-12 hours
+            Standard: 3-5 hours
+            Expedited: 1-5 minutes
+
+Relational Database Service (RDS)
+    Service Introduction
+        Challenges of Relational Databases
+            Server Maintenance and energy footprint
+            Software install and patches
+            Database backups and high availability'
+            Limits on scalability
+            Data security
+            OS install and patches
+        AWS service sets up, operates and scales
+        You manage:
+            Application Optimization
+        AWS manages:
+            OS installation and patches
+            Database software install and patches
+            Database backups
+            High Availability
+            Scaling
+            Power and rack & stack
+            Server Maintainence
+    Overview and Use-Cases
+        Amazon RDS DB Instances
+            DB instance class
+                CPU
+                Memory
+                Network Performance
+            DB instance storage
+                Magnetic
+                General Purpose (SSD)
+                Provisioned IOPS
+            DB Engines powered are: MySQL, Amazon Aurora, Microsoft SQL Server, PostgreSQL, MariaDB, Oracle
+            High Availability with Multi-AZ Deployment
+                Once generated, Amazon generates a standby copy of instance in another availability zone within the same VPC
+                The transactions are synchroniously replicated. If master database instance crashes, Amazon bring the database online automatically
+        Amazon RDS in your Virtual Private Cloud
+        Amazon RDS Read Replicas
+            Asynchronous replication method used
+            Offload read queries from the master DB instance
+            Ideal for read-heavy database workloads
+            Read replica can be promoted to Master if needed
+        Use Cases
+            Web and Mobile Applications
+                High Throughput
+                Massive Storage Scalability
+                High Availability
+            E-commerce Applications
+                Low cost database
+                Data security
+                Fully managed solution
+            Mobile and Online-Games
+                Rapidly grow capacity
+                Automatic scaling
+                Database monitoring
+
+        Amazon RDS Benefits
+            Highly Scalable
+            High Performance
+            Easy to administer
+            Available and durable
+            Secure and compliant
+
+DynamoDB
+    Amazon DynamoDB overview
+        What is Amazon DynamoDB ?
+            NoSQL database tables as service
+            Store as many items as you want
+            Items may have different attributes
+            Low-latency queries
+            Scalable read/write throughput
+         Common Use Cases
+            Web
+            Mobile Apps
+            Internet of Things
+
+RedShift
+    Overview
+        Allows you to make complex analytical queries using parallelization
+        Automating and Scaling
+            Managing
+            Monitor
+            Scale
+        Compatibility with variety of Business Intelligence tools
+    Use Cases
+        Enterprise Data Warehouse (EDW)
+            Migrate at a pace that customers are comfortable with
+            Experiment without a large upfront cost or commitment
+            Respond faster to business needs
+        Big Data
+            Low price point for small customers
+            Managed service for ease of deployment and maintenance
+            Focus more on data and less on database management
+        SaaS
+            Scale the data warehouse capacity as demand grows
+            Add analytic functionality to applications
+            Reduce hardware and software costs by an order of magnitude
+
+Aurora
+    Service Introduction
+        MySQL database which combines the performance and availability of traditional enterprise databases with simplicity and cost effectiveness of open source databases
+        Benefits
+            Managed Service
+            Fast and available
+            Simple
+            Compatible
+            Pay as you go
+        Amazon RDS vs Amazon Aurora
+            Stores 6 copies of your data with continious back up to S3
+            Designed for instant crash recovery
+            Resilient Design: Database crash makes it available new one within 60 seconds
+
+Trusted Advisor
+    Service Introduction
+        Checks all of your resources in your account to see if they are following the best practices. This does in four different categories:-
+            Cost optimization
+            Performance
+            Security
+            Fault Tolerance
+    Case Study
+        Trusted advisor helped Hungama Digital Media by higlighting:-
+            Underutilized EC2 instances
+            Amazon EC2 reserved instances
+            Underutilized Amazon EBS volumes
+    Using Trusted Advisor
+    Demonstration
+
+Knowledge Check (Security Groups)

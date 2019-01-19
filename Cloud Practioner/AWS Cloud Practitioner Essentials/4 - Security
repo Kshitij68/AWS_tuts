@@ -1,0 +1,48 @@
+Introduction to AWS Security
+    Module Topics
+        Approach to Security
+        Controls
+        AWS products and features
+
+    Keep your data safe
+        Resilient infrastructure
+        High Security
+        Strong safeguards
+    Continual Improvement
+        Rapid innovation
+        Constantly evolving security services
+    Pay for what you need
+        Meet needs at lower operational costs
+    Meet Compliance Requirements
+        Governance-enabled features
+    AWS Shared Responsibility Model
+        Inherit AWS Security Controls
+        Layer your controls
+    Security Products and Features
+        Tools from AWS and partners
+        Monitoring and Logging
+    Network Security
+        Built-in Firewalls
+        Encryption in transit
+        Private / Dedicated Connections
+        DDOS mitigation
+    Inventory and Configuration Management
+        Manage creation / decommissioning of AWS resources
+        Inventory and configuration tools
+        Template definition and tools
+    Data Encryption
+        Encryption capabilities for AWS Storage / Database services
+        Key Management Options
+        Hardware-based cryptographic key storage options
+    Access Control and Management
+        Identity and Access Management (IAM)
+        Multi-Factor Authentication
+        Integration and federation with corporate directories
+    Monitoring and Logging
+        Deep Visibility into API calls
+        Log aggregation and options
+        Alert notifications
+        Reduce your risk profile
+    AWS Marketplace
+        Partner security products
+        Complement AWS features and tools

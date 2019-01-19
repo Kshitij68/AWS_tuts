@@ -1,0 +1,26 @@
+Cloud computing is on-time delivery. You pay as you use.
+
+Agility
+-> Speed
+    Global reach within a moment's notice
+    New resources are only a click away
+-> Experimentation
+    Enables operations as code
+    Safely experiment by spinning up servers in minutes
+    Testing using different configurations
+-> Culture of Innovation
+    Experiment quickly with low cost / risk
+
+How does AWS support Agility?
+The AWS Infrastructure
+-> Elasticity, Scalability and Reliability of computing resources
+-> Built around regions and availability zones
+-> Availability Zones
+-> Fault Tolerance
+    Applications operational during component failure
+    Built in redundancy of components
+-> High Availability
+    Systems always functioning and accessible
+    Downtime is minimized as much as possible
+-> Elasticity
+    Scale computing resources up or down easily
