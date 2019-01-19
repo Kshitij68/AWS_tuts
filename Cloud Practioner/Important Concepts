@@ -1,0 +1,64 @@
+1. The Principal of Least Privilege
+    Term used to describe giving an AWS user only access to services he/she needs to do to the required job and nothing more
+
+2. Rules for S3 bucket
+    - Unique names across all AWS
+    - Name must be between 3 and 63 characters
+
+3. Benefits of On-Demand EC2
+    - Most flexible buying option
+    - Create, Start, Stop, Terminate at any time (with no startup or termination fees)
+
+4. CloudTrail
+    - Create a trail to retain your events
+    - Using trail, you can create metrics, trigger alerts, create workflows
+    - Create trail from an organization by logging in with master account for that AWS organization
+
+5. CloudWatch
+    - You can use CloudWatch to collect and track metrics, which are variables you can measure for your resources and applications
+    - You can set up a billing alarm that triggers SNS notification to your email address (using SNS service)
+
+6. AWS can be used for virtualization as well
+
+7. Elastic Load Balancer & Auto-Scaling ensure AWS services are highly available and fault tolerant
+
+8. S3 has multiple storage classes
+    - Standard
+    - Reduced Redundancy
+    - Infrequent Access
+        Infrequent Access has lowest availability rating
+
+9. Total Cost of Ownership Calculator
+    - This tools automates the task of selecting the right AWS instance type based information you provide.
+    - This eliminates much of guesswork
+
+9. CloudFront
+    - Web-Service that gives businesses and web application developers an easy and cost effective way to distribute content with low latency and high data transfer speeds
+    - Your files are distributed to end-users using a global network of edge-locations
+
+10. AWS Trusted Advisor
+    - Helps you reduce costs, increase performance and improve security by optimising your AWS environment.
+    - Trusted Advisor provides real time guidance to help you provision your resources following AWS best practices
+    - All the plans give 24/7 access to customer service, documentation, whitepapers, and support forums
+    - Business and Enterprise plans give access to full set of checks
+    - Basic and Developer give access to 6 core checks
+
+11. AWS EC2
+    - On-Demand: Pay as for what you use
+    - Spot: Pay as what you want (but they will be terminated with fluctuation of market prices
+    - Reserved: Require minimum 1 year committment.
+    - Dedicated Hosts: Cannot be used when underlying hardware cannot be shared across tenants (customers). This is the most expensive one (and not ideal for development purposes)
+
+12. Security Groups
+    - Acts as a firewall for your instance to control inbound and outbound traffic
+    - When you launch an instance in VPC, you can access up to five security groups to the instance
+
+13. Elastic Load Balancer
+    - Automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers and IP addresses
+    - It can handle single load of your application traffic in a single Availability Zone or across multiple Availability Zones
+    - ElasticLoad offers three types of load balancers that all feature the high availability, automatic scaling, and robust security to make your application fault tolerant
+
+14. AutoScaling
+    - Does not distribute compute capacity across EC2. It automatically adjusts capacity by provisioning new EC2 instances
+
+15. Dynamo DB is fully managed database service (but not RDS)
