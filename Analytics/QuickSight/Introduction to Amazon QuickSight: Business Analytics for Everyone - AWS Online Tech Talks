@@ -1,0 +1,75 @@
+Youtube Link: https://www.youtube.com/watch?v=WaOrQtxLXfs
+
+What is QuickSight?
+Fully Managed server-less, cloud business intelligence system
+
+AWS Database and Analytics Track
+Business Intelligence:- QuickSight
+Machine Learning:- Machine Learning
+Relational Databases:- Aurora, RDS
+Non-Relational Databases:- Dynamo DB (Key/Value Document), ElastiCache (Redis, Memcached)
+Analytics:- RedShift, EMR, Athena, Elasticsearch service, Kinesis Analytics
+Data Lake:- S3, S3 Glacier, Glue (ETL & Data Catalog), Macie (Data Protection)
+Data Movement:- Database Migration Servie, Snowball, Snowmobile, Kinesis Data Firehouse, Kinesis Data Streams
+
+QuickSight View
+Scalable:- Automatically scales with your usage and activity, with no need for additional infrastructure
+Pay for what you use:- Pay monthly or annually. Now with Pay-per-session pricing, data consumers only pay when they access their reports and dashboards with no up-front costs
+Serverless, and Fully Managed:- No upfront cost,software to deploy, capacity plannning, maintenance, upgrades or migrations
+Fully Integrated:- RedShift, S3, Athena, Aurora, RDS, IAM, CloudTrail, Cloud Directory
+
+Connect to your data, wherever it is
+QuickSight is natively integrated with AWS data sources, as well as on-premise and hosted databases and third party business applications
+
+On-premises: Securely connect to on-premise databases and flat files like Excel and CSV
+-> Excel
+-> CSV
+-> Teradata
+-> MySQL
+-> SQL Server
+
+In-the cloud: Connect to hosted database, big data formats, and secure VPCs
+-> Redshift
+-> RDS
+-> S3
+-> Athena
+-> Aurora
+-> Teradata
+-> MySQL
+-> Presto
+-> Spark
+-> SQL Server
+-> Postgre SQL
+-> Maria DB
+-> Snowflake
+
+Applications
+-> SalesForce
+-> Square
+-> Adobe Analytics
+-> Jira
+-> Service Now
+-> Twitter
+-> Github
+
+QuickSight covers all of your users from casual data consumers, to dashboard creators, to power users and analysts that need self-serve analytics
+Explore:- Give power users and analysts the freedom to discover data
+Create:- Create and publish rich interactive dashboards to all your users
+Consume:- Provide everyone in your organization with secure, easy access to interactive dashboards and reports, on any device
+
+Create and Publish Interactive Dashboards and Reports
+-> Rich interactively for end users like filters, drill downs, zooming, and more
+-> Blazing fast navigation with SPICE
+-> Accessible with any device
+-> Keep everyone up-to-date with data refresh
+-> Publish to everyone with a click
+
+Explore, Visualize, Collaborate
+Give power to users and analysts fast, easy-to-use self serve analytics with the Author role
+-> Connect to data source, and create/edit datasets
+-> Create visual analyses, filters, drill downs and more
+-> Invite co-workers to collaborate on your analyses
+-> Publish dashboards and reports
+
+<Demo>
+<To Complete>
