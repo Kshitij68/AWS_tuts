@@ -1,0 +1,82 @@
+Youtube Link: https://www.youtube.com/watch?v=fORJ6y572gs
+
+Agenda
+-> What is serverless?
+-> Enterprise Data Warehouse on AWS (Amazon Redshift)
+-> Serverless Queries from your Data Warehouse (Redshift Spectrum)
+-> Serverless Data Catalog (AWS Glue)
+-> Serverless ETL (AWS Glue)
+-> Serverless BI (Amazon QuickSight)
+-> Demonstration
+-> Wrap up
+
+What is serverless?
+Virtualized => Managed => Serverless
+
+Virtualized
+-> You can easily provision servers and focus on OS and above
+
+Managed
+-> You focus higher in the stack but still need to consider servers, how much CPU is needed, and much RAM. AWS manages based on customer configuration
+
+Server-less
+-> Build applications and services without thinking of servers
+-> Don't be concerned about provisioning, scaling and maintaining servers for fault tolerance and availability. AWS does all for you.
+
+Server-less Characteristics
+-> No servers to provision or manage
+-> Scales with usage
+-> Never pay for idle resources
+-> Availability and fault tolerance built-in
+
+Enterprise Data Warehouse
+-> Managed massively parallel petabyte scale data warehouse
+-> Streaming backup/restore to S3
+-> Load data from S3, DynamoDB and EMR
+-> Extensive Security Features
+-> Online Scaling from 160Gb -> 2 PB
+
+Amazon Redshift Spectrum
+Run SQL queries directly against data in S3 using thousands of nodes
+-> Fast @ exabyte scale
+-> Elastic & highly available
+-> On-demand, pay-per-query
+-> High Concurrency: Multiple clusters access same data
+-> No ETL: Query data in-place using open file formats
+-> Full Amazon Redshift support
+
+Data can be pushed to S3 in JSON, Parque or CSV format and then the schema can be defined using data catalog (using Glue) and easily query that dataset
+
+
+Redshift Spectrum
+-> Leverages Amazon's Redshift advanced cost-based optimizer
+-> Pushed down projections, filters, aggregations and join reduction
+-> Dynamic partition pruning to minimize data processed
+-> Automatic parallelization of query execution against S3 data
+-> Efficient join processing within the Amazon Redshift cluster
+
+
+AWS Glue
+-> Discover: Automatically discover and categorizes your data to make it immediately searchable and queryable
+-> Develop: Generates code to clean, enrich, and reliably move data between data stores; you can also use their favorite tools to build ETL jobs
+-> Deploy: Runs your jobs on server-less, fully managed, scale-out environment without needing to provision or manage compute resources
+
+AWS Glue: Components
+Data Catalog:
+    Apache Hive Metastore compatible with enhanced functionality
+    Crawlers automatically extract metadeta and create tables
+    Integrated with Amazon Athena, Amazon Redshift Spectrum
+Job Authoring:
+    Auto generate ETL code
+    Built on open frameworks - Python and Spark
+    Developer centric - editing, debugging, sharing
+Job Execution:
+    Runs jobs on serverless Spark platform
+    Provides flexible scheduling
+    Handles dependency resolution, monitoring, and alerting
+
+Amazon QuickSight
+About: Business analytics service that lets business users quickly and easily visualize, explore, and share insights from the data
+Data Sources: Wide number of data sources built into quick-sight
+Integration: S3, RDS, Redshift, Athena, Excel
+Performance: SPICE (Super-fast Parallel In-memory optimized Calculation Engine) delivers unprecedented performance and scale, delivering insights at the speed of thought
