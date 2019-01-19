@@ -1,9 +1,5 @@
 # PyCharm
-.idea/AWS_tuts.iml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/workspace.xml
+.idea/*
 
 # AWS Account Details
 credentials
