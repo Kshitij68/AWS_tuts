@@ -1,0 +1,125 @@
+Youtube Link: https://www.youtube.com/watch?v=GgLKodmL5xE
+
+MasterClass
+-> A technical deep dive that goes beyond the basics
+-> Intended to educate you on how to get the best from AWS services
+-> Show you how things work and how to get things done
+
+Amazon Red-shift
+-> Optimised for Data Warehousing
+-> Scalable
+-> No Up-Front Costs
+-> Simple
+-> Secure
+-> Compatible
+
+Agenda
+-> Why run your data warehouse on AWS?
+-> Getting Started
+-> Table Design
+-> Data Loading
+-> working with Data
+-> Backup and Restoration
+-> Upgrading & Scaling
+
+Why run your data warehouse on AWS? Traditional databases are
+-> Expensive
+-> Difficult to administer
+-> Challenging to scale
+-> Very difficult to switch
+
+Customers asked for data warehousing the AWS way
+-> Easy to provision & scale up massively
+-> No upfront costs, pay as you go
+-> Really fast performance at a really low price
+-> Open and flexible with support for popular BI tools
+
+Amazon Redshift parallelises & distributes everything
+-> Query
+-> Load
+-> BackUp
+-> Restore
+-> Resize
+
+Amazon Redshift lets you scale start small & grow big
+dc1.large.nodes
+14GiB RAM
+2 virtual cores, 10giGE
+Single Node (160GB SSD)
+Let you scale upto 32 clusters (5.12TB SSD)
+
+dc1.8x.large.nodes
+244GiB RAM
+32 virtual cores, 10GigE
+Lets you scale upto 128 nodes (upto 326TB SSD)
+
+ds2.8x.large.nodes
+244Gib RAM
+36 virtual cores, 10GiGE, 16TB magnetic HDD per node
+Cluster 2-128 nodes (upto 2PB magnetic HDD)
+
+Simplify cluster operations with Amazon Redshift
+-> Built-in security in transit, at rest, when backed up
+-> Backup to Amazon S3 is continuous, incremental & automatic
+-> Streaming restores let you resume querying faster
+-> Disk failures are transparent & nodes recover automatically
+
+Amazon Redshift drastically reduces IO
+-> Column Storage
+-> Data Compression
+-> Zone Maps
+-> Direct-attached storage
+-> Large data block sizes
+
+Amazon Redshift in Action
+-> Needed a way to increase speed, performance and flexibility of data analysis at a low cost
+-> Using AWS enabled FT to run queries 98% faster than previously - helping FT make business decisions quickly
+-> Easier to track and analyze trends
+-> Reduced infrastructure costs by 80% over traditional data center model
+
+Getting Started with Amazon Redshift
+-> 2 month free trial
+-> Getting started tutorial
+-> Amazon Redshift System Overview
+-> Guides for table design, loading data & query design
+-> Connect using industry standard OBDC/JDBC connections
+-> Many BI & ETEL vendors have certified Amazon Redshift
+
+Choosing the optimal table design
+-> Compression Encodings
+-> Choosing the right data types
+-> Distributing and sorting data
+
+Choosing a column compression type
+-> Compression is a key tool improving performance in modern data warehousing systems to
+    reduce the size of data that is read from storage,
+    minimise IO
+    improve query performance
+-> The COPY command used to load data in Amazon Redshift will perform compression analysis
+-> We strongly recommend using the COPY command to apply automatic compression
+
+Distributing data
+-> Redshift is a distributed system
+    -> A cluster contains a leader node & compute nodes
+    -> A compute node contains slices (one per core)
+    -> A slice contains data
+-> Slides are chosen based on two types of distribution
+    -> Round Robin (automated)
+    -> Based on a distribution key (hash of defined column)
+-> Queries run on all slices in parallel: optimal query throughput can achieved when data is evenly spread across slices
+
+Rest of the video is about Amazon Analytics - QuickSight. Notes in respective column
+
+BackUp and Restoration
+-> Backups to Amazon S3 are automatic, continuous & incremental
+-> Configure system snapshot retention period
+-> User snapshots on-demand
+-> Streaming restores enable you to resume querying faster
+
+Resizing cluster
+-> Resize while remaining online
+-> Provision a new cluster in the background
+-> Copy data in parallel from node to node
+-> Only charged for source cluster
+
+Automatic SQL endpoint switchover via DNS Decommission the source cluster
