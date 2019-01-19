@@ -1,0 +1,14 @@
+https://www.youtube.com/watch?v=RznsIbaXo2g
+
+AWS Compute Technologies to Deploy code:
+-> EC2 : Deploying virtual machines
+-> Elastic Beanstalk : Platform as a service product where you only deploy app and not manage underlying infrastructure
+-> Lambda : Deploying only stateless functions
+-> EC2 Container Service : Allows you to manage Docker clusters
+
+Amazon EC2
+-> You select a machine image (could be linux, windows etc.)
+-> You select instance size
+-> You start your virtual machine
+-> Once the server is up, you can connect to it, just like any other server
+-> You get load balancing, monitoring, auto-scaling, network storage
