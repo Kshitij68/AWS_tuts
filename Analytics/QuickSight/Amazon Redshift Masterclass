@@ -1,0 +1,16 @@
+Youtube link: https://www.youtube.com/watch?v=GgLKodmL5xE
+
+
+Continued from Databases/Redshift/AWS Redshift Masterclass
+
+-> Makes easy to build visualizations
+-> Integrate with AWS datasources like Amazon Redshift as well as other stores like flat files and third party data sources
+-> Provides in-memory query engine that means it's possible to get analysis in less than 60 seconds
+
+Key Features
+-> First Analysis in less than 60 seconds
+-> Blazing fast queries with a new in-memory query engine
+-> Dynamic Beautiful Data Visualizations
+-> Share Live and Snapshot Analyses with Everyone
+-> Integrate with Data Sources on AWS
+-> 1/10 th the cost of old-guard BI tools
