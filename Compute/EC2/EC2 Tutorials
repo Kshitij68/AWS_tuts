@@ -1,0 +1,48 @@
+https://www.youtube.com/watch?v=jLVPqoV4YjU
+TODO: Complete the video
+
+Amazon EC2 Key Features
+-> Providing re-sizble compute capacity in the cloud
+-> Designed to make web-scale cloud computing easier
+-> A true virtual computing environment
+-> Launch instances with a variety of operating systems
+-> Run as many or few systems as you desire
+
+Basic Characterstics
+-> Completely Controlled
+-> Elastic
+-> Flexible
+-> Web-Scale
+-> Reliable
+-> Secure
+-> Easy to start
+-> Inexpensive
+
+Agenda
+-> Amazon EC2 Concepts & Fundamentals
+-> Storage & Networking
+-> Monitoring, Metrics & Logs
+-> Security & Access Control
+-> Deployment
+-> Cost Optimisation
+
+Amazon EC2 Concepts
+-> The geographical region where AWS EC2 will launch the instances you create
+-> Choose region to optimise latency, minimise costs, or address regulatory requirements
+
+Instances
+-> Amazon EC2 provides wide selection of types optimized to fit different use cases
+-> Instance types comprise varying combinations of CPU, memory, storage and networking capacity
+
+Instance Types (serviced with resources in different ratios)
+-> General Purpose (M4)
+-> Compute Optimized (C4)
+-> Memory Optimized (R3)
+-> GPU Optimized (G2)
+-> Storage Optimized (D2)
+-> IO Optimized (I2)
+-> Low cost, burst-able performance (T2)
+
+i2.xlarge (Storage - Optimized) <=> Generation.Type(Family)
+
+T2: Allocated baseline performance level
