@@ -1,0 +1,30 @@
+https://www.youtube.com/watch?v=XZggsCITQdY
+
+Agenda for Today's Session
+-> AWS Compute Domain
+-> Why AWS Lambda ?
+-> What is AWS Lambda ?
+-> AWS SDKs
+-> Using AWS Lambda with Eclipse IDE
+-> Demo
+
+AWS Compute Domain services:
+EC2
+    Can install any kind of operating system
+    Can configure it to become a web-server, to become a worker environment
+Elastic Beanstalk
+    Automated version of EC2
+    No access to operating system. But have control over the operating system
+AWS Lambda
+    Don't get access to operating system
+    No option of configuration
+    Just upload a code
+    Useful for executing background tasks
+
+AWS Lambda is server-less computing service
+Just upload code and it is executed (used to execute background tasks)
+
+AWS SDKs
+One can simplify using AWS Services in your applications with an API tailored to your programming language or platform
+AWS SDKs are called Software Development Kits, which are APIs defined for specific programming language
+These APIs can be integrated with an IDE and thus can be used with ease
