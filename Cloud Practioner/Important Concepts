@@ -17,6 +17,7 @@
 5. CloudWatch
     - You can use CloudWatch to collect and track metrics, which are variables you can measure for your resources and applications
     - You can set up a billing alarm that triggers SNS notification to your email address (using SNS service)
+    - Used to aggregte logs from EC2 instance
 
 6. AWS can be used for virtualization as well
 
@@ -27,6 +28,7 @@
     - Reduced Redundancy
     - Infrequent Access
         Infrequent Access has lowest availability rating
+    - RRS: Reduced Redundancy Storage: Stores objects on multiple devices across multiple capacities, but does not provide as many times as standard Amazon s3 storage
 
 9. Total Cost of Ownership Calculator
     - This tools automates the task of selecting the right AWS instance type based information you provide.
@@ -34,10 +36,11 @@
 
 9. CloudFront
     - Web-Service that gives businesses and web application developers an easy and cost effective way to distribute content with low latency and high data transfer speeds
-    - Your files are distributed to end-users using a global network of edge-locations
+    - Your files are distributed to end-users using a global network of edge-locations (hence it uses the edge locations)
+    - Using edge locations mitigates the problem of DDoS attacks
 
 10. AWS Trusted Advisor
-    - Helps you reduce costs, increase performance and improve security by optimising your AWS environment.
+    - (i) Cost Optimization (ii) Performance (not equivalent to CPU utlization) (iii) Security (iv) Fault Tolerance (v) Service Limits
     - Trusted Advisor provides real time guidance to help you provision your resources following AWS best practices
     - All the plans give 24/7 access to customer service, documentation, whitepapers, and support forums
     - Business and Enterprise plans give access to full set of checks
@@ -48,6 +51,9 @@
     - Spot: Pay as what you want (but they will be terminated with fluctuation of market prices
     - Reserved: Require minimum 1 year committment.
     - Dedicated Hosts: Cannot be used when underlying hardware cannot be shared across tenants (customers). This is the most expensive one (and not ideal for development purposes)
+    - Feature to have auto-recovery:
+        - Create a CloudWatch alarm that monitors your Amazon EC2 instance and automatically recovers the instance if it becomes impaired
+        - Only EBS volumes can be recovered
 
 12. Security Groups
     - Acts as a firewall for your instance to control inbound and outbound traffic
@@ -61,4 +67,172 @@
 14. AutoScaling
     - Does not distribute compute capacity across EC2. It automatically adjusts capacity by provisioning new EC2 instances
 
-15. Dynamo DB is fully managed database service (but not RDS)
+15. Amazon Dynamo DB is fully managed database service (but not RDS)
+
+16. EBS
+    - Persistent Block Storage for use with Amazon EC2 instances
+    - Each EBS is automatically replicated within the same availability zone to protect you from component failure, offering high availability and durability
+    - EBS volumes offer the consistent and low-latency performance needed to run your workloads.
+    - You can scale your usage up or down within minutes - all while paying a low price for only what you provision
+    - Benefits:- (i) Reliable
+                (ii) Consistent, Low Latency Performance
+                (iii) Backup, Restore, Innovate
+                (iv) Quickly Scale up, Easily scale down
+                (v) Geographic Flexibility (vi) Optimised Performance
+
+17. Amazon Route 53
+    - Highly available and scalable domain name system (DNS) web service
+    - Gives developers and businesses an extremely reliable and cost effective way to route end users to internet applications by translating names like www.example.com to numeric IP addresses like 192.0.2.1 that computers used to connect with each other
+    - Amazon Route 53 is fully compliant with IPv6 as well.
+    - Use to perform any of three main functions:-
+        - Domain Registration
+        - DNS Routing
+        - Health Checking
+
+18. Design for failure and nothing will fail
+    Concept followed while deploying the application to multiple availability zones
+
+19. OLTP vs OLAP
+    OLTP - Online Transactional Processing
+        - Excel at quickly looking up specific information
+        - Excel at transactional procedures like Insert, Update, Delete
+        Common OLTP systems:
+            - MySQL
+            - PostgreSQL
+            - Amazon Aurora
+            - Oracle DBMS
+            - IBM DB2
+    OLAP - Online Analytic Processing
+        - Designed to answer questions about data
+        - OLAP is designed to be columnar
+        - Instead of rows the underlying data is organized column by column
+        Common OLAP systems:
+            - Amazon Redshift
+            - HP Vertica
+            - Teradeta
+            - IBM Netezza
+            - KBB+
+
+20. Decoupling an application helps to reduce inter-dependencies so failures do not impact other components
+
+21. Benefits of running an application across two Availability Zones
+    Increases the availability of an application compared to running in a single availability zone
+
+22. Cloud Computing Model includes
+    - IaaS - Infrastructure
+    - PaaS - Platform
+    - SaaS - Software
+    Cloud Computing Model does not include
+    - HaaS - Hardware
+
+23. Amazon Data Migration Service
+    - To migrate its Oracle database to AWS (without affecting the functionality of the source database)
+
+24. DynamoDB, AutoScaling - Do not need to manage the underlying infrastructure
+    EC2, S3 - Need to manage the underlying infrastructure
+
+25. Amazon CloudFormation
+    - Helps to manage infrastructure as code
+    - Allows you to use a text file to model and provision, in an automated and secure manner, all the resources needed for your application
+
+26. Amazon X-Ray
+    - Helps Analyze and debug production, distributed applications, such as those built using a micro-services architecture
+    - Provides an end-to-end view of requests as they travel through your application, and shows a map of your applications underlying components
+
+27. Amazon Config
+    - Enables you to assess, audit, and evaluate the configurations of your AWS resources
+    - Continuously monitors and records your AWS resource configuration and allows you to automate the evaluation of recorded configurations
+    - Helps you mitigate possible DDoS attacks
+
+28. Amazon SQS
+    - Cannot be more than 80 characters
+    - Queue name should be unique within AWS account
+    - Used to decouple distributed software systems
+
+29. Amazon Aurora
+    - Provides high availability and automated backups
+
+30. AWS General Design Principles
+    - Stop guessing your capacity needs
+    - Test systems at production scale: Can create production scale test environment on demand, complete your testing, and then decommission the resources
+    - Automate to make architectural experimentation easier
+    - Allow for evolutionary architectures
+    - Drive architectures using data
+    - Improve through game days
+
+31 Placement Groups
+    - Determine how instances are placed on underlying hardware
+    - Useful to implement High-Performance Computing system with low-latency network performance
+
+32. Developer vs Business vs Enterprise Plans
+    - Trusted Advisor: 7 checks for developer and all checks for other plans
+    - Technical Support Manager to coordinate with you
+
+33. Amazon VPC
+    - Your responsibility to add rules in the security group
+
+34. Amazon Snowball
+    - Snowball is petabyte-scale data transport solution that uses devices secure to transfer large amounts of data into and out of AWS Cloud
+    - Address common problems involving high network costs, long transfer times, and security concerns
+    - You simply create a job in the console and device is shipped to you
+    - Attach the device to your local network, download and run the Snowball Client to estabilish the connection
+    - Use client to select and trasfer files that you want
+
+35. AWS Abuse Team
+    This service should be used when the user suspects that AWS services are being used for abusive or illegal purposes
+    Resolution
+        - Spam
+        - Port scanning
+        - Denial of Service Attacks (DDoS)
+        - Intrusion attempts
+        - Hosting objectionable or copyright content
+        - Distributing malware
+
+36. Amazon WAF
+    - Gives you control over which traffic to allow or block to your web applications by defining customizable web security rules
+
+37. Amazon Inspector
+    - Automated security assessment service that helps improve the security and compliance of applications deployed on AWS
+    - Automatically exposes applications for exposure, vulnerabilities, and deviations from best practices
+
+38. AWS Personal Health Dashboard
+    - Personalized View of Service Health
+    - Proactive Notifications
+    - Detailed Troubleshooting Guidance
+    - Integration and Automation
+    - Fine-grained Access Control via IAM policy conditions
+
+39. AWS Acceptable Use Policy
+    No Illegal, Harmful, or Offensive Use or Content
+        - Illegal, Harmful, or Fraudlent Activities
+        - Infiriging Content
+        - Offensive Content
+        - Harmful Content
+    No Security Violations
+        - Unauthorized Access
+        - Interception
+        - Falsification of Origin
+    No Network Abuse
+        - Monitoring or Crawling
+        - Denial of Service (DoS)
+        - Intentional Inteference
+        - Operation of Certain Network Services
+        - Avoiding System Restrictions
+    No Email or Other Message Abuse
+    Our Monitoring and Enforcement
+    Reporting Violations of the Policy
+
+    Customer can perform penetration testing of Lambda instances upon prior approval from AWS
+
+40. Factors that can impact data replication to a remote location
+    - Distance between the sites
+    - Available bandwidth
+    - Data rate required by your application
+    - Replication technology
+
+41. Amazon ElasticCache
+    - Fully managed Redis and Memcached
+    - Useful to store the data that is frequently accessed (resulting in lower latency)
+
+42. Amazon Redshift
+    - Peta-byte scale data warehouse fully managed (not Aurora)
