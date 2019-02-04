@@ -1,5 +1,5 @@
 1. The Principal of Least Privilege
-    Term used to describe giving an AWS user only access to services he/she needs to do to the required job and nothing more
+    - Term used to describe giving an AWS user only access to services he/she needs to do to the required job and nothing more
 
 2. Rules for S3 bucket
     - Unique names across all AWS
@@ -17,7 +17,7 @@
 5. CloudWatch
     - You can use CloudWatch to collect and track metrics, which are variables you can measure for your resources and applications
     - You can set up a billing alarm that triggers SNS notification to your email address (using SNS service)
-    - Used to aggregte logs from EC2 instance
+    - Used to aggregate logs from EC2 instance
 
 6. AWS can be used for virtualization as well
 
@@ -54,6 +54,10 @@
     - Feature to have auto-recovery:
         - Create a CloudWatch alarm that monitors your Amazon EC2 instance and automatically recovers the instance if it becomes impaired
         - Only EBS volumes can be recovered
+    - Reserved instances can be sold in AWS marketplace.
+        - You can set only the upfront price for your reserved instance
+    - You can modify the rules for a security group at any time
+    - You can turn off reserved instances by paying a small hourly fee
 
 12. Security Groups
     - Acts as a firewall for your instance to control inbound and outbound traffic
@@ -67,7 +71,9 @@
 14. AutoScaling
     - Does not distribute compute capacity across EC2. It automatically adjusts capacity by provisioning new EC2 instances
 
-15. Amazon Dynamo DB is fully managed database service (but not RDS)
+15. Amazon DynamoDB
+    - Fully managed database service (but not RDS)
+    - Global tables allow read and write performance for global tables
 
 16. EBS
     - Persistent Block Storage for use with Amazon EC2 instances
@@ -177,6 +183,7 @@
     - You simply create a job in the console and device is shipped to you
     - Attach the device to your local network, download and run the Snowball Client to estabilish the connection
     - Use client to select and trasfer files that you want
+    - Pay per job
 
 35. AWS Abuse Team
     This service should be used when the user suspects that AWS services are being used for abusive or illegal purposes
@@ -236,3 +243,24 @@
 
 42. Amazon Redshift
     - Peta-byte scale data warehouse fully managed (not Aurora)
+
+43. Amazon Chime
+    - Useful for business conferencing
+
+44. Your system is facing extra load. You can automate the process of increasing the capacity using:-
+    - bootstraping
+    - Golden Images
+
+45. AWS responsibility in Shared Security Model
+    - Securing edge locations
+    - Monitoring physical device security
+    - Implementing service organization Control (SOC) standards
+
+46. AWS Billing
+    - Helps to estimate monthly bill
+
+47. AWS Certificate Manager
+    - Used to secure network communications and estabilish the identity of websites over the internet
+
+48. AWS CodePipeline
+    - Built in plugins for popular third party apps like Github that can easily build out an end-to-end solution
