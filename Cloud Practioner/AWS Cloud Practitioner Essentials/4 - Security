@@ -3,46 +3,145 @@ Introduction to AWS Security
         Approach to Security
         Controls
         AWS products and features
-
     Keep your data safe
         Resilient infrastructure
-        High Security
-        Strong safeguards
+        High Security (without the operational overhead of traditional data center)
+        Strong safeguards (to protect customer privacy)
     Continual Improvement
         Rapid innovation
         Constantly evolving security services
     Pay for what you need
-        Meet needs at lower operational costs
+        Meet needs at lower operational costs (compared to managing your own infrastructure)
     Meet Compliance Requirements
         Governance-enabled features
     AWS Shared Responsibility Model
-        Inherit AWS Security Controls
+        Inherit AWS Security Controls (reducing number of security controls that you need)
         Layer your controls
     Security Products and Features
         Tools from AWS and partners
         Monitoring and Logging
     Network Security
-        Built-in Firewalls
+        Built-in Firewalls (allow you to create private networks)
         Encryption in transit
         Private / Dedicated Connections
-        DDOS mitigation
+        DDoS mitigation (as part of Autoscaling, CloudFront technologies)
     Inventory and Configuration Management
         Manage creation / decommissioning of AWS resources
         Inventory and configuration tools
         Template definition and tools
     Data Encryption
-        Encryption capabilities for AWS Storage / Database services
+        Encryption capabilities for AWS Storage / Database services (such as EBS, S3, SQL RDS, Redshift etc.)
         Key Management Options
         Hardware-based cryptographic key storage options
     Access Control and Management
-        Identity and Access Management (IAM)
+        Identity and Access Management (IAM) (To define individual user accounts with services)
         Multi-Factor Authentication
         Integration and federation with corporate directories
     Monitoring and Logging
-        Deep Visibility into API calls
+        Deep Visibility into API calls (who, what, when and whom the calls were made)
         Log aggregation and options
         Alert notifications
         Reduce your risk profile
     AWS Marketplace
         Partner security products
         Complement AWS features and tools
+
+The AWS Shared Responsibility Model
+    Customer and AWS share responsibility of securing data
+
+    AWS Responsible
+        Security of Cloud
+            - AWS Foundation Services (Compute, Storage, Databases, Networking)
+            - Physical security
+            - Global Infrastructure including regions, availability zones and edge locations
+            - Third party reports are available
+            - Handles basic security tasks for DynamoDB, RDS, Redshift, ElastiMapReduce, Workspaces
+                - OS and database patching
+                - Firewall configuration
+                - Disaster Recovery
+
+    Customer responsible
+        - Logical access controls
+        - Protect account credentials
+        - Customers are responsible of the security of everything they put in the cloud
+            - Maintain complete control over the content
+            - What to store
+            - Which AWS services are used with the content
+            - In what country the content is stored
+            - Content format and structure
+            - Who has access to the content
+            - How the access right are created, managed and revoked
+
+    The Shared responsibility model changes based on the service the customer uses
+
+    AWS is responsible for security of the cloud
+    Customers are responsible for security in the cloud
+
+AWS Access Control and Management
+    - Control access to AWS Resources
+    - Authentication:  Who can use the resources
+    - Autherization: How they can use the resources
+
+    - Users: End users
+    - Groups: Group of users
+    - Permissions: Applied to group of users or users
+    - Roles: Trusted Entities
+
+    - Manage IAM users and access
+    - Manage IAM roles and their permissions
+    - Manage federated users and permissions
+
+    - AWS Authentication
+        - Programmatic Access
+            - Enables access key ID / secret access key
+            - AWS API, CLI, SDK etc.
+        - Management Console
+            - Sigh in to the console
+            - Uses AWS account name and password
+            - MFA if enabled
+    - Responsibility of customer to define password policies
+
+    - IAM Best Practices
+        - Delete AWS root account access keys
+        - Activate multi-factor authentication (MFA)
+        - Give IAM users only the permission they need
+        - Use IAM groups
+        - Apply an IAM password policy
+        - Use roles for applications
+        - Use roles instead of sharing credentials
+        - Rotate credentials regularly
+        - Remove unnecessary users and credentials
+        - Use policy conditions for extra secutiry
+        - Monitor activity in your account
+
+AWS Security Compliance Programs
+    Discussions on:-
+        - AWS Compliance approach
+        - AWS Risk and Compliance Programs
+        - AWS Customer Compliance Responsibilities
+
+    AWS Compliance Approach
+        - Shared Responsibility Model: Both AWS and customers share control
+        - AWS provides:
+            - Highly secure and controlled platform
+            - Wide array of security features
+        - Customer:
+            - Configuring the IT
+
+        AWS Security and Information Sharing
+            - Obtaining industry certifications
+            - Publishing security and control practices
+            - Providing documentation
+
+        Assurance Programs
+            - Certifications / Attestations
+            - Laws, Regulations, and Privacy
+
+    AWS Risk and Compliance Programs
+        - Gives information about AWS controls
+        - Assists customer in documenting a complete control and governance framework
+
+        - Made up of three componenets
+            - Risk Management
+            - Control Environment
+            - Information Security
