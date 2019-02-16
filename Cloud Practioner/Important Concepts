@@ -74,9 +74,11 @@
 15. Amazon DynamoDB
     - Fully managed database service (but not RDS)
     - Global tables allow read and write performance for global tables
+    - Includes set type which includes string, binary, and number
 
 16. EBS
     - Persistent Block Storage for use with Amazon EC2 instances
+    - It is magnetic storage (persistent but slower)
     - Each EBS is automatically replicated within the same availability zone to protect you from component failure, offering high availability and durability
     - EBS volumes offer the consistent and low-latency performance needed to run your workloads.
     - You can scale your usage up or down within minutes - all while paying a low price for only what you provision
@@ -138,6 +140,7 @@
     EC2, S3 - Need to manage the underlying infrastructure
 
 25. Amazon CloudFormation
+    - Creates and provisions AWS resources
     - Helps to manage infrastructure as code
     - Allows you to use a text file to model and provision, in an automated and secure manner, all the resources needed for your application
 
@@ -195,10 +198,20 @@
         - Hosting objectionable or copyright content
         - Distributing malware
 
-36. Amazon WAF
+36. Amazon WAF and Shield
+    - Helpful in protecting web exploits and DDoS attacks
+    - WAF: Web Application Firewall
+        - Create own rules
+        - Block certain IP addresses
+        - Controls excessive requests
+        - Avoids SQL injections
+    - Shield:
+        - 24/7 support against DDoS attacks
+        - Basic and Advanced plans
     - Gives you control over which traffic to allow or block to your web applications by defining customizable web security rules
 
 37. Amazon Inspector
+    - Analyze behavior of AWS resources
     - Automated security assessment service that helps improve the security and compliance of applications deployed on AWS
     - Automatically exposes applications for exposure, vulnerabilities, and deviations from best practices
 
@@ -264,3 +277,59 @@
 
 48. AWS CodePipeline
     - Built in plugins for popular third party apps like Github that can easily build out an end-to-end solution
+
+49. Comprehensive Data Policy includes:
+    - Wiping
+    - Disposing
+    - Retention
+    - Storage
+    Does not include (i) Elasticity (ii) Virtualization
+
+50. NoSQL does not support ACID properties
+
+51. Company that faces a lot of network traffic issues should use ELB (instead of CloudFront)
+
+52. Memory optimized instances are useful for high-performance databases, genome analysis, In-memory analytics
+
+53. AWS Storage Gateway
+    - Enables your on-premise applications to seamlessly use AWS Cloud Storage
+    - Benefits:
+        - Integrated
+        - Performance
+        - Optimized Transfers
+        - Simple
+        - Cloud Scale
+        - Durable and Secure
+
+54. AWS Billing and Pricing Overview
+    - AWS Trusted Advisor: Basic and Developer have 7 checks. Business and Enterprise have all checks
+    - Technical Assistance:
+        Basic: None
+        Developer: During business hours
+        Business: 24/7 to cloud support
+        Enterprise: 24/7 to senior cloud support
+    - Case Severity:
+        Basic: None
+        Developer: For general guidance and system impaired
+        Business: General guidance, system impaired, production system impaired, production system down
+        Enterprise: General guidance, System impaired, Production system impaired, Production system down, Business critical system
+
+55. AWS Shared Responsibility model
+    - Customer
+        - Responsibility of Security In the Cloud
+            - Customer Data
+            - Platform, Applications, Identity and Access Management
+            - Operating System, Network and Firewall Configuration
+            - Client side data encryption & data integrity authentication
+            - Server side data and file encryption
+            - Networking traffic protection
+        - AWS
+            - Software
+                - Compute
+                - Storage
+                - Database
+                - Networking
+            - Hardware / AWS Global Infrastructure
+                - Regions
+                - Availability Zones
+                - Edge locations
