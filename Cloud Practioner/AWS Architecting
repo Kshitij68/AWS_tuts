@@ -1,0 +1,83 @@
+Introduction to Well-Architect Framework
+
+Well-Architect Framework
+-> Developed by reviewing customers architecting
+-> Helps build the most
+    - Secure
+    - High Performing
+    - Resilient
+    - Efficient
+-> Consistent approach for evaluating architectures
+-> Important so that you can
+    - Build and deploy faster
+    - Lower or mitigate risks
+    - Make informed decisions
+    - Learn AWS best practices
+-> Five pillars of well architected framework:
+    - Operational Excellence
+        - Run and monitor systems to deliver business value
+        - Continually improve supporting processes and procedures
+        - Design Principles
+            - Perform operations as code
+                Treat your entire workload the same as you would application code
+                Use scripting and automation to trigger action corrosponding to certain events
+                Enable consistent responses to events
+            - Annotate Documentation
+                Update documentation to align with the environment
+            - Make frequent, small, irreversible changes
+                Allow components to be updated regularly
+            - Refine operations procedures frequently
+                Evolve procedures
+            - Anticipate failure
+                Test all failure scenarios before pushing to production
+            - Learn from all operational failures
+    - Security
+        - Implement a strong identity foundation
+        - Enable traceability
+        - Apply security at all layers
+        - Automate security best practices
+        - Protect data in transit and at rest
+        - Prepare for security events
+    - Reliability
+        Overview
+        - Improve the ability of system to recover from infrastructure or service disruptions
+        - Dynamically acquire computing resources to meet demand
+        - Mitigate disruption
+        Design Principles
+        - Test recovery procedures
+        - Automatically recover from failure
+        - Scale horizontally to increase aggregate system availability
+        - Stop guessing capacity
+        - Manage change in automation
+    - Performance Efficiency
+        Overview
+        - Use computing resources efficiently
+        - Maintain efficiency as demand changes and technologies evolve
+        Design Principles
+        - Democratize advanced technologies
+        - Go global in minutes
+        - Use serverless architectures
+        - Experiment more often
+        - Mechanical symphathy
+    - Cost Optimization
+        Overview
+        - Avoid or eliminate unneded cost or sub-optimal resources
+        Design Principles
+        - Adopt a consumption model
+        - Measure overall efficiency
+        - Stop spending money on data center operations
+        - Analyze and attribute expenditure
+        - Use managed service to reduce cost of ownership
+
+
+Fault Tolerance
+    -> Ability of system to remain operational
+    -> Built in redundancy of application components
+High Availability
+    -> Available irrespective of situations
+
+On Premise vs AWS
+    -> Traditional: (i) very expensive (ii) Only mission critical apps
+    -> AWS: (i) Multiple servers (ii) AZ's (iii) Regions (iv) Fault tolerant services
+
+Elastic Load Balancer
