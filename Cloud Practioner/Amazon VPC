@@ -1,0 +1,11 @@
+Introduction
+-> Virtual network that you have defined
+-> VPC is housed within selected AWS region
+-> VPC spans multiple availability zones in a region
+-> Only 5 VPC per region
+
+Default VPC
+-> When we open, AWS will create predefined VPC in each region
+-> We can connect to our resources using default VPC
+-> All the subnets have a route to the internet via route table and an attached GW
+->
